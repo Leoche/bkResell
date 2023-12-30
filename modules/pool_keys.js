@@ -1,5 +1,7 @@
-import { Liquidity, Market } from "@raydium-io/raydium-sdk"
 import { PublicKey } from "@solana/web3.js"
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url)
+const { Liquidity, Market } = require("@raydium-io/raydium-sdk");
 
 //returns the pool keys (info and required params/program id's)
 //neccessary to interact with the liquidity pool program and compute live prices and estimates.
